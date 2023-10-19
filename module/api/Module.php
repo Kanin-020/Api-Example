@@ -1,5 +1,5 @@
 <?php
-namespace example;
+namespace api;
 
 use Laminas\ApiTools\Provider\ApiToolsProviderInterface;
 

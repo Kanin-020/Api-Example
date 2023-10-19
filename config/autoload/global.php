@@ -5,6 +5,7 @@ return [
     ],
     'db' => [
         'adapters' => [
+            'dummy' => [],
             'mysql' => [],
         ],
     ],
@@ -22,7 +23,7 @@ return [
     'api-tools-mvc-auth' => [
         'authentication' => [
             'map' => [
-                'example\\V1' => 'oauth2',
+                'api\\V1' => 'oauth2',
             ],
         ],
     ],

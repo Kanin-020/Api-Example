@@ -1,14 +1,29 @@
 <?php
-
-declare(strict_types=1);
-
 return [
     'api-tools-content-negotiation' => [
         'selectors' => [],
     ],
-    'db'                            => [
+    'db' => [
         'adapters' => [
-            'dummy' => [],
+            'mysql' => [],
+        ],
+    ],
+    'router' => [
+        'routes' => [
+            'oauth' => [
+                'options' => [
+                    'spec' => '%oauth%',
+                    'regex' => '(?P<oauth>(/token))',
+                ],
+                'type' => 'regex',
+            ],
+        ],
+    ],
+    'api-tools-mvc-auth' => [
+        'authentication' => [
+            'map' => [
+                'example\\V1' => 'oauth2',
+            ],
         ],
     ],
 ];
